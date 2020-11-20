@@ -39,7 +39,7 @@ public class Exe_1_3_14<Item> implements Iterable<Item>
 
     public void enqueue(Item item)
     {
-        if(N==q.length)
+        if(N==q.length)        //有问题？？？这里不可以用N，用为出栈过程中，first指到了数组的中间，last已经到数组尾了，N 肯定小于数组长度的，当last到数组尾就要扩容
         {
             resize(2*q.length);
         }
